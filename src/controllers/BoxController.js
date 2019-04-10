@@ -1,6 +1,12 @@
 const Box = require('../models/Box');
 
 class BoxController {
+  async index (req, res) {
+    const boxs = await Box.find({});
+
+    return res.json(boxs);
+  }
+
   async store (req, res) {
     const box = await Box.create(req.body);
 

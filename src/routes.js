@@ -8,6 +8,7 @@ const BoxController = require('./controllers/BoxController');
 const FileController = require('./controllers/FileController');
 
 routes.get('/', (req, res) => res.json({status: 'active'}));
+routes.get('/box', BoxController.index);
 routes.post('/box', BoxController.store);
 routes.get('/box/:id', BoxController.show);
 routes.post('/box/:id/file', multer(multerConfig).single('file'), FileController.store);
