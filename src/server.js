@@ -19,7 +19,7 @@ io.on('connection', socket => {
 });
 
 mongoose.connect('mongodb+srv://rocket:admintemp@rocket-ye3w8.mongodb.net/test?retryWrites=true', {
-  useNewUrlParse: true,
+  useNewUrlParser: true,
 });
 
 app.use((req, res, next) => (req.io = io, next()));
