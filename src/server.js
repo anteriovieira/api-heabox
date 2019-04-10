@@ -18,7 +18,7 @@ io.on('connection', socket => {
   });
 });
 
-mongoose.connect('mongodb+srv://rocket:admintemp@rocket-ye3w8.mongodb.net/test?retryWrites=true', {
+mongoose.connect(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
 });
 
